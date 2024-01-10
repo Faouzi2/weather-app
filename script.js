@@ -11,11 +11,32 @@ document.getElementById("btn").addEventListener("click", () => {
     .then((json) => {
       const temperature = document.querySelector(".weather-stat .temp");
       const description = document.querySelector(".weather-stat .sky");
+      const image = document.querySelector(".weather-stat img");
 
-      temperature.innerHTML = `Temperature in  ${city}  ${parseInt(
-        json.main.temp
-      )} °C`;
-      description.innerHTML = `With  ${json.weather[0].description}`;
+      temperature.innerHTML = `  ${city}  ${parseInt(json.main.temp)}°C`;
+      description.innerHTML = `  ${json.weather[0].description}`;
+
+      switch (json.weather[0].main) {
+        case "Clear":
+          image.src = "pics/clear.png";
+          break;
+
+        case "Rain":
+          image.src = "pics/rain.png";
+          break;
+        case "Cloud":
+          image.src = "pics/cloud.png";
+          break;
+        case "Mist":
+          image.src = "pics/mist.png";
+          break;
+        case "Snow":
+          image.src = "pics/snow.png";
+          break;
+        default:
+          image.src = "pics/cloud.png";
+          break;
+      }
     })
     .catch((error) => {
       console.error("Error fetching weather data:", error);
