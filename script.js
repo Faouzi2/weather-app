@@ -12,9 +12,13 @@ document.getElementById("btn").addEventListener("click", () => {
       const temperature = document.querySelector(".weather-stat .temp");
       const description = document.querySelector(".weather-stat .sky");
       const image = document.querySelector(".weather-stat img");
+      const humidity = document.querySelector(".weather-stat .humid");
+      const windSpeed = document.querySelector(".weather-stat .wind");
 
       temperature.innerHTML = `  ${city}  ${parseInt(json.main.temp)}°C`;
       description.innerHTML = `  ${json.weather[0].description}`;
+      humidity.innerHTML = `HUMIDITY: ${json.main.humidity}%`;
+      windSpeed.innerHTML = `WIND SPEED: ${json.wind.speed}`;
 
       switch (json.weather[0].main) {
         case "Clear":
@@ -42,3 +46,4 @@ document.getElementById("btn").addEventListener("click", () => {
       console.error("Error fetching weather data:", error);
     });
 });
+
