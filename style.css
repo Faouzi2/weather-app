@@ -10,7 +10,7 @@
 }
 body{
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   min-height: 100vh;
   background: url("pics/clouds-170135_1280.jpg");
@@ -23,9 +23,10 @@ body{
   position:relative;
   width: 400px;
   height: 600px;
-  /* background-color: rgba(8, 78, 99, 0.517); */
+  /* background-color: rgba(8, 78, 99, 0.517);  */
   border-radius: 10px;
   padding: 20px;
+  margin :10px ;
 }
 .top-titel{
   font-size: 22px;
@@ -54,8 +55,8 @@ body{
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* background-color: rgba(4, 235, 227, 0.547); */
-  margin-top: 20px;
+  
+  margin-top: 35px;
   color: rgb(50, 44, 10);
   
 }
@@ -69,14 +70,64 @@ body{
  
 }
 .temp{
-  font-size: 36px;
+  font-size: 70px;
 }
 .sky{
   font-size: 32px;
 }
 .weather-stat img{
-  width: 60%;
+  width: 40%;
 }
 
+.days-stat {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding-top: 4px;
+    border-radius: 8px;
+    }
+  .day-card {
   
+    border: 0.5px solid #39457b94;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    height:250px ;
+    font-size: 20px;
+    color: rgb(50, 44, 10);
+     
+  }
+  .day-card:hover{
+    
+    transition: 0.3s ;
+    background-color:#3b799d66 ; 
+  }
+
+  .day-img {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 1200px) {
+    .days-stat{
+      display:table;
+      font-size: 1rem;
+      
+    }
+    .weather-stat{
+      font-size: 1rem;
+      margin:1rem;
+      padding: 1rem;
+    }
+    .temp,.sky,.top-titel{
+      font-size: 1rem;
+    }
+    .weather-stat img{
+      width: 1rem;
+      margin-top: 5px;
+    }
+    
+  }
   
