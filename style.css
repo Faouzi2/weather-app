@@ -114,20 +114,25 @@ body{
     .days-stat{
       display:table;
       font-size: 1rem;
-      
+    }
+    .day-card{
+      width: 120px;
     }
     .weather-stat{
       font-size: 1rem;
-      margin:1rem;
-      padding: 1rem;
+      margin:10px;
+      padding: 10px;
     }
-    .temp,.sky,.top-titel{
-      font-size: 1rem;
+    .temp,.sky{
+      font-size: 1.8rem;
+     
     }
     .weather-stat img{
       width: 1rem;
-      margin-top: 5px;
+      
     }
-    
+    img.clouds{
+      width:30% ;
+    }
   }
-  
+      
