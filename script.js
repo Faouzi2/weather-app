@@ -51,7 +51,7 @@ document.getElementById("btn").addEventListener("click", () => {
   )
     .then((response) => response.json())
     .then((json) => {
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 5; i++) {
         const dayStat = document.querySelector(`.day${i + 1}-stat`);
         const img = document.querySelector(`.day${i + 1}img`);
         const temp = document.querySelector(`.day${i + 1}temp`);
@@ -89,4 +89,3 @@ function getWeatherIcon(weatherMain) {
       return "pics/cloud.png";
   }
 }
-
